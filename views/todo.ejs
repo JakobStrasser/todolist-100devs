@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Title in the tab</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/style.css">
+	</head>
+	<body>
+        <h2>Todo Items</h2>
+		<ul id="todos">
+			<% for(let i=0; i<info.length;i++) { %>
+                <li class="todoItem" data-id='<%= info[i]._id %>'>
+                    <span class=<%= info[i].completed ? 'completed' : 'waiting' %>> <%= info[i].text %></span>
+                    <span class="del">Delete</span>
+                </li>
+            <% } %>
+        </ul>
+		<h2>You have <span id="total"></span> things left to do</h2>
+			<form action="" method='POST'>
+				<input type="text" placeholder="Enter Todo Item" name='text'>
+				<input type="submit">
+			</form>
+
+		<script type="text/javascript" src="/js/todo.js"></script>
+	</body>
+</html>
