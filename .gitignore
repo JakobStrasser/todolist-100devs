@@ -1,6 +1,2 @@
 .env
 node_modules
-config
-config.js
-db.js
-passport.js
