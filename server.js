@@ -3,7 +3,7 @@ const express = require('express')
 const colors = require('colors')
 const {errorHandler} = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
-const cors = require('cors')
+//const cors = require('cors')
 const req = require('express/lib/request')
 const passport = require('passport')
 const session = require('express-session')
@@ -27,10 +27,10 @@ app.set('view engine', 'ejs')
 //Body handler
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
-app.use(cors( {
+/*app.use(cors( {
     origin: '*',
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-}))
+}))*/
 
 app.use(express.static(__dirname + '/public'))
 
